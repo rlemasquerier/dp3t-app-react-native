@@ -3,6 +3,11 @@ PODS:
   - CocoaAsyncSocket (7.6.4)
   - CocoaLibEvent (1.0.0)
   - DoubleConversion (1.1.6)
+  - dp3t-sdk-react-native (1.0.0):
+    - DP3TSDK
+    - React
+  - DP3TSDK (1.0.0):
+    - SQLite.swift
   - FBLazyVector (0.62.2)
   - FBReactNativeSpec (0.62.2):
     - Folly (= 2018.10.22.00)
@@ -292,12 +297,17 @@ PODS:
     - React-cxxreact (= 0.62.2)
     - React-jsi (= 0.62.2)
     - ReactCommon/callinvoker (= 0.62.2)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
 
 DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
+  - dp3t-sdk-react-native (from `../node_modules/dp3t-sdk-react-native`)
+  - DP3TSDK (from `https://github.com/rlemasquerier/dp3t-sdk-ios`, commit `b7c70750b3be172688bf287e752071103b6b5fea`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
   - Flipper (~> 0.33.1)
@@ -358,11 +368,17 @@ SPEC REPOS:
     - Flipper-RSocket
     - FlipperKit
     - OpenSSL-Universal
+    - SQLite.swift
     - YogaKit
 
 EXTERNAL SOURCES:
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
+  dp3t-sdk-react-native:
+    :path: "../node_modules/dp3t-sdk-react-native"
+  DP3TSDK:
+    :commit: b7c70750b3be172688bf287e752071103b6b5fea
+    :git: https://github.com/rlemasquerier/dp3t-sdk-ios
   FBLazyVector:
     :path: "../node_modules/react-native/Libraries/FBLazyVector"
   FBReactNativeSpec:
@@ -412,11 +428,18 @@ EXTERNAL SOURCES:
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
+CHECKOUT OPTIONS:
+  DP3TSDK:
+    :commit: b7c70750b3be172688bf287e752071103b6b5fea
+    :git: https://github.com/rlemasquerier/dp3t-sdk-ios
+
 SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
   CocoaLibEvent: 2fab71b8bd46dd33ddb959f7928ec5909f838e3f
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
+  dp3t-sdk-react-native: 4def5db1a447141bf6eb8554240c0d647b2298bb
+  DP3TSDK: 10f01d1fa493c5004bf1837ac0d611afd5d4f3ec
   FBLazyVector: 4aab18c93cd9546e4bfed752b4084585eca8b245
   FBReactNativeSpec: 5465d51ccfeecb7faa12f9ae0024f2044ce4044e
   Flipper: 6c1f484f9a88d30ab3e272800d53688439e50f69
@@ -448,9 +471,10 @@ SPEC CHECKSUMS:
   React-RCTText: fae545b10cfdb3d247c36c56f61a94cfd6dba41d
   React-RCTVibration: 4356114dbcba4ce66991096e51a66e61eda51256
   ReactCommon: ed4e11d27609d571e7eee8b65548efc191116eb3
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   Yoga: 3ebccbdd559724312790e7742142d062476b698e
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 426aad20b0e8602ae69afd05484ea76e9dc73e43
+PODFILE CHECKSUM: 5e7a2a9dc0ba29b581ce4fd23ed3e9f30e12cbe8
 
 COCOAPODS: 1.9.0

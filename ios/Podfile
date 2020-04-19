@@ -77,6 +77,8 @@ target 'Dp3tRNApp' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'DP3TSDK', :git => 'https://github.com/rlemasquerier/dp3t-sdk-ios', :commit => 'b7c70750b3be172688bf287e752071103b6b5fea'
+
   target 'Dp3tRNAppTests' do
     inherit! :complete
     # Pods for testing
