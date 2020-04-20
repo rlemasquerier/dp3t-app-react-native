@@ -4,7 +4,7 @@ import dp3t from 'dp3t-sdk-react-native';
 
 const App = () => {
   dp3t
-    .initialize('rntest', 'dev')
+    .initialize('rndemo', 'dev')
     .then((res) => {
       console.warn('res', res);
     })
@@ -22,6 +22,15 @@ const App = () => {
     });
 
   dp3t
+    .sync()
+    .then((res) => {
+      console.warn('Sync success');
+    })
+    .catch((error) => {
+      console.warn('sync error: ', error);
+    });
+
+  dp3t
     .status()
     .then((status) => {
       console.warn('status: ', status);
@@ -30,9 +39,14 @@ const App = () => {
       console.warn(error);
     });
 
-  dp3t.sync().catch((error) => {
-    console.warn('sync error: ', error);
-  });
+  dp3t
+    .iWasExposed('2020-04-09', 'WWWWWW')
+    .then((res) => {
+      console.warn('I was exposed success');
+    })
+    .catch((error) => {
+      console.warn('I was exposed error: ', error);
+    });
 
   return (
     <View style={styles.container}>
