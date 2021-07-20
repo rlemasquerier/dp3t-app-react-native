@@ -12,7 +12,7 @@
   "dependencies": {
     "dp3t-sdk-react-native": "https://github.com/rlemasquerier/dp3t-sdk-react-native.git#a405943bdaa4814cf51b426524f6ed368c9f715c",
     "react": "16.11.0",
-    "react-native": "0.62.2"
+    "react-native": "0.62.3"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
